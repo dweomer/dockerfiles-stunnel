@@ -1,4 +1,4 @@
-# dweomer/stunnel
+# dweomer/stunnel [![](https://badge.imagelayers.io/dweomer/stunnel:latest.svg)](https://imagelayers.io/?images=dweomer/stunnel:latest 'Get your own badge on imagelayers.io')
 
 To secure an LDAP container named `directory`:
 
