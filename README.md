@@ -1,4 +1,4 @@
-# dweomer/stunnel [![](https://badge.imagelayers.io/dweomer/stunnel:latest.svg)](https://imagelayers.io/?images=dweomer/stunnel:latest 'Get your own badge on imagelayers.io')
+# dweomer/stunnel [![Docker Stars](https://img.shields.io/docker/stars/dweomer/stunnel.svg?maxAge=2592000)]() [![Docker Pulls](https://img.shields.io/docker/pulls/dweomer/stunnel.svg?maxAge=2592000)]()
 
 To secure an LDAP container named `directory`:
 
@@ -9,6 +9,6 @@ docker run -itd --name ldaps --link directory:ldap \
         -e STUNNEL_CONNECT=ldap:389 \
         -p 636:636 \
 #       -v /etc/ssl/private/server.key:/etc/stunnel/stunnel.key:ro \
-#       -v /etc/ssl/private/server.crt:/etc/stunnel/stunnel.crt:ro \
+#       -v /etc/ssl/private/server.crt:/etc/stunnel/stunnel.pem:ro \
     dweomer/stunnel
 ```
