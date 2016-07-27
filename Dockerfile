@@ -1,4 +1,4 @@
-FROM alpine:3.2
+FROM alpine:edge
 
 MAINTAINER Jacob Blain Christen <mailto:dweomer5@gmail.com, https://github.com/dweomer, https://twitter.com/dweomer>
 
@@ -7,7 +7,6 @@ COPY stunnel.sh /srv/
 
 RUN set -x \
  && chmod +x /srv/stunnel.sh \
- && cat /etc/apk/repositories | sed -e 's,alpine/.*/main,alpine/edge/testing,g' >> /etc/apk/repositories \
  && addgroup -S stunnel \
  && adduser -S -G stunnel stunnel \
  && apk add --update \
