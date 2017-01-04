@@ -1,5 +1,6 @@
 # dweomer/stunnel
 [![stars](https://img.shields.io/docker/stars/dweomer/stunnel.svg?maxAge=2592000)](https://hub.docker.com/r/dweomer/stunnel/) [![pulls](https://img.shields.io/docker/pulls/dweomer/stunnel.svg?maxAge=2592000)](https://hub.docker.com/r/dweomer/stunnel/) [![](https://images.microbadger.com/badges/image/dweomer/stunnel.svg)](https://microbadger.com/images/dweomer/stunnel "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/dweomer/stunnel.svg)](https://microbadger.com/images/dweomer/stunnel "Get your own version badge on microbadger.com")
+
 ## Stunnel on Alpine
 To secure an LDAP container named `directory`:
 
