@@ -3,7 +3,7 @@
 export STUNNEL_CONF="/etc/stunnel/stunnel.conf"
 export STUNNEL_DEBUG="${STUNNEL_DEBUG:-7}"
 export STUNNEL_CLIENT="${STUNNEL_CLIENT:-no}"
-export STUNNEL_SNI="${STUNNEL_SNI:-}"
+#export STUNNEL_SNI="${STUNNEL_SNI:-}"
 export STUNNEL_CAFILE="${STUNNEL_CAFILE:-/etc/ssl/certs/ca-certificates.crt}"
 export STUNNEL_KEY="${STUNNEL_KEY:-/etc/stunnel/stunnel.key}"
 export STUNNEL_CRT="${STUNNEL_CRT:-/etc/stunnel/stunnel.pem}"
