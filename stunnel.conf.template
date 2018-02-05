@@ -10,6 +10,7 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 CAfile = ${STUNNEL_CAFILE}
+verifyChain = ${STUNNEL_VERIFY_CHAIN}
 
 debug = ${STUNNEL_DEBUG}
 output = /var/log/stunnel/stunnel.log
