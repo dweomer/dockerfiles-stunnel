@@ -20,3 +20,4 @@ client = ${STUNNEL_CLIENT}
 [${STUNNEL_SERVICE}]
 accept = ${STUNNEL_ACCEPT}
 connect = ${STUNNEL_CONNECT}
+delay = ${STUNNEL_DELAY}
