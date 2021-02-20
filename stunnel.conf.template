@@ -1,8 +1,8 @@
 cert = ${STUNNEL_CRT}
 key = ${STUNNEL_KEY}
 
-setuid = stunnel
-setgid = stunnel
+setuid = ${STUNNEL_UID}
+setgid = ${STUNNEL_GID}
 
 pid = /var/run/stunnel/stunnel.pid
 
