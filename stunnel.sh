@@ -2,6 +2,8 @@
 
 export STUNNEL_CONF="/etc/stunnel/stunnel.conf"
 export STUNNEL_DEBUG="${STUNNEL_DEBUG:-7}"
+export STUNNEL_UID="${STUNNEL_UID:-stunnel}"
+export STUNNEL_GID="${STUNNEL_GID:-stunnel}"
 export STUNNEL_CLIENT="${STUNNEL_CLIENT:-no}"
 #export STUNNEL_SNI="${STUNNEL_SNI:-}"
 export STUNNEL_CAFILE="${STUNNEL_CAFILE:-/etc/ssl/certs/ca-certificates.crt}"
