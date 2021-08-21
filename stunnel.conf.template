@@ -22,3 +22,4 @@ client = ${STUNNEL_CLIENT}
 accept = ${STUNNEL_ACCEPT}
 connect = ${STUNNEL_CONNECT}
 delay = ${STUNNEL_DELAY}
+verify = ${STUNNEL_VERIFY}
