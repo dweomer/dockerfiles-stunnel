@@ -12,6 +12,7 @@ export STUNNEL_VERIFY_CHAIN="${STUNNEL_VERIFY_CHAIN:-no}"
 export STUNNEL_KEY="${STUNNEL_KEY:-/etc/stunnel/stunnel.key}"
 export STUNNEL_CRT="${STUNNEL_CRT:-/etc/stunnel/stunnel.pem}"
 export STUNNEL_DELAY="${STUNNEL_DELAY:-no}"
+export STUNNEL_PROTOCOL_CONFIG_LINE=${STUNNEL_PROTOCOL:+protocol = ${STUNNEL_PROTOCOL}}
 
 if [[ -z "${STUNNEL_SERVICE}" ]] || [[ -z "${STUNNEL_ACCEPT}" ]] || [[ -z "${STUNNEL_CONNECT}" ]]; then
     echo >&2 "one or more STUNNEL_SERVICE* values missing: "
@@ -35,8 +36,12 @@ cp -v ${STUNNEL_CAFILE} /usr/local/share/ca-certificates/stunnel-ca.crt
 cp -v ${STUNNEL_CRT} /usr/local/share/ca-certificates/stunnel.crt
 update-ca-certificates
 
+function trim() {
+    awk '{$1=$1};1'
+}
+
 if [[ ! -s ${STUNNEL_CONF} ]]; then
-    cat /srv/stunnel/stunnel.conf.template | envsubst > ${STUNNEL_CONF}
+    cat /srv/stunnel/stunnel.conf.template | envsubst | trim > ${STUNNEL_CONF}
 fi
 
 exec "$@"
