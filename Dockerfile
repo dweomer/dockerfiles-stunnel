@@ -5,10 +5,12 @@ RUN set -x \
  && adduser -S -G stunnel stunnel \
  && apk add --update --no-cache \
         ca-certificates \
-        gettext \
         libintl \
         openssl \
         stunnel \
+ && grep main /etc/apk/repositories > /etc/apk/main.repo \
+ && apk add --update --no-cache --repositories-file=/etc/apk/main.repo \
+        gettext \
  && cp -v /usr/bin/envsubst /usr/local/bin/ \
  && apk del --purge \
         gettext \
