@@ -36,7 +36,7 @@ if [[ ! -f ${STUNNEL_KEY} ]]; then
         echo >&2 "crt (${STUNNEL_CRT}) missing key (${STUNNEL_KEY})"
         exit 1
     fi
-
+    openssl rand -writerand /srv/stunnel/randfile
     openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ${STUNNEL_KEY} -out ${STUNNEL_CRT} \
         -config /srv/stunnel/openssl.cnf 
 fi

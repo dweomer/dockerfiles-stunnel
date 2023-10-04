@@ -1,4 +1,4 @@
-RANDFILE                = /dev/urandom
+RANDFILE                = /srv/stunnel/randfile
 
 [ req ]
 default_bits            = 2048
